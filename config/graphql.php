@@ -2,10 +2,7 @@
 
 declare(strict_types=1);
 
-use example\Mutation\ExampleMutation;
-use example\Query\ExampleQuery;
-use example\Type\ExampleRelationType;
-use example\Type\ExampleType;
+use App\GraphQL\Types\UserType;
 
 return [
 
@@ -121,9 +118,7 @@ return [
     // ]
     //
     'types' => [
-        // 'example'           => ExampleType::class,
-        // 'relation_example'  => ExampleRelationType::class,
-        // \Rebing\GraphQL\Support\UploadType::class,
+        'users' => UserType::class,
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request
